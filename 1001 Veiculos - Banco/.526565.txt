@@ -1,0 +1,18 @@
+mydb = mysql.connector.connect(
+
+    host="localhost",
+    user="root",
+    password="admin",
+    database="1001_veiculos"
+
+)
+
+cursor = mydb.cursor()
+cursor.execute("SELECT * FROM veiculo")
+resultadoUsers = cursor.fetchall()
+
+content = {}
+content['resultado'] = resultadoUsers
+
+for item in resultadoUsers:
+    print(item)

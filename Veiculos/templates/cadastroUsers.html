@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastros de Usuários</title>
+        <style>
+            body{
+           font-family: Aril, Halvetica, sans-serif;
+           background-image: linear-gradient(90deg, blue, white);
+        }
+        .Titulo{
+           font-size: 60px;
+           font-weight: bold;
+           text-align: center;
+           color: white;
+           margin-top: 15px;
+        }
+        .TC{
+           background-color: rgba(0,0,0,0.5);
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%,-50%);
+           padding: 60px;
+           border-radius: 15px;
+           color: white;
+        }
+        #login{
+           padding: 15px;
+           border: none;
+           outline: none;
+           font-size: 15px;
+           align-items: center;
+           width: 90%;
+        }
+
+        #senha{
+           align-items: center;
+           padding: 15px;
+           border: none;
+           outline: none;
+           font-size: 15px;
+           width: 90%;
+        }
+        #cadastrar{
+           background-color: dodgerblue;
+           border: none;
+           padding: 15px;
+           width: 100%;
+           border-radius: 10px;
+           color: white;
+           font-size: 30px;
+           margin-top: 10px;
+           margin-bottom: 10px;
+        }
+
+        #cadastrar:hover{
+           background-color: deepskyblue;
+           cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <form action="/insertUsers/" method="post">
+        {% csrf_token %}
+        <div class="TC">
+            <h1>Cadastrar Usuário</h1>
+            <p>
+                <label for="login"></label>
+                <input type="text" placeholder="Digite aqui seu login" id="login" name="login">
+            </p>
+            <p>
+                <label for="senha"></label>
+                <input type="password" placeholder="Digite aqui sua senha" id="senha" name="senha">
+            </p>
+            <p>
+                <input type="submit" value="Cadastrar" id="cadastrar">
+            </p>
+        </div>
+</body>
+</html>

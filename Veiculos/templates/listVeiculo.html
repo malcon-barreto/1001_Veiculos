@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Veículos</title>
+    <style>
+       body{
+           font-family: Aril, Halvetica, sans-serif;
+           background-image: linear-gradient(90deg, blue, white);
+       }
+       .Titulo{
+           font-size: 60px;
+           font-weight: bold;
+           text-align: center;
+           color: white;
+       }
+       .Lista{
+           background-color: rgba(0,0,0,0.5);
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%,-50%);
+           padding: 80px;
+           border-radius: 15px;
+           color: white;
+           font-size: 25px;
+       }
+    </style>
+</head>
+<body>
+<h1 class="Titulo">Lista de Veículos</h1>
+<div class="Lista">
+    <table>
+        <tr>
+            <th> Nome </th>
+        </tr>
+            {% for item in resultado %}
+                <tr>
+                    <td class="item">{{item.0}}</td>
+                </tr>
+            {% endfor %}
+    </table>
+</div>
+</body>
+</html>

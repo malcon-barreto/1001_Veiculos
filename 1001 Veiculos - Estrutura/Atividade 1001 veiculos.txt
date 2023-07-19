@@ -1,0 +1,13 @@
+       1 - 1001 Veículos Concessionária - Lucas e Malcon
+
+    A 1001 Veículos é uma concessionária de veículos. A 1001 veículos precisa de um sistema que faça:
+    - Cadastro e Listagem de usuários do sistema
+	- Os usuários terão: Nome, Login, e senha
+    - Cadastro e listagem de marcas de veículos
+        - Marca terá nome
+    - Cadastro e listagem de veículos
+        - Veículo terá nome, marca e preço
+    - Cadastro e listagem de clientes
+	- Cliente terá nome e CPF
+    - Cadastro e Listagem de Vendas
+        - Uma venda terá o id do login do funcionário logado, o carro vendido e o id do cliente
